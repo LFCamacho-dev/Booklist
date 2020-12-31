@@ -1,0 +1,121 @@
+:root {
+  --clr-primary: #1ae6c1;
+  --clr-dark: black;
+  --clr-light: white;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* utility clases */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--clr-primary);
+}
+
+.text-dark {
+  color: var(--clr-dark);
+}
+
+.text-light {
+  color: var(--clr-light);
+}
+
+.bg-primary {
+  color: var(--clr-primary);
+}
+
+.bg-dark {
+  color: var(--clr-dark);
+}
+
+.bg-light {
+  color: var(--clr-light);
+}
+
+.py-1 {
+  padding: 1.5rem 0;
+}
+.py-2 {
+  padding: 2.5rem 0;
+}
+.py-3 {
+  padding: 3.5rem 0;
+}
+
+.p-1 {
+  padding: 1.5rem;
+}
+.p-2 {
+  padding: 2.5rem;
+}
+.p-3 {
+  padding: 3.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 12px;
+}
+
+.btn-primary{
+  background-color: var(--clr-primary);
+  padding: .5rem 2rem!important;
+  color: var(--clr-dark)!important;
+}
+
+/* navbar */
+#navbar{
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  padding: 0.6rem;
+}
+
+#navbar div{
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+#navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+#navbar ul li a {
+  color: var(--clr-light);
+  padding: 0.75rem;
+  margin: 0 0.25rem;
+}
+
+#navbar ul li a:hover {
+  color: var(--clr-primary);
+  border-bottom: var(--clr-primary) solid 2px;
+  padding: 0.75rem;
+  margin: 0 0.25rem;
+}
