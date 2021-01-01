@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
 :root {
   --clr-primary: #1ae6c1;
   --clr-dark: black;
@@ -11,6 +13,7 @@
 }
 
 body {
+  font-family: 'Muli', sans-serif;
   line-height: 1.4;
 }
 
@@ -43,15 +46,15 @@ a {
 }
 
 .bg-primary {
-  color: var(--clr-primary);
+  background-color: var(--clr-primary);
 }
 
 .bg-dark {
-  color: var(--clr-dark);
+  background-color: var(--clr-dark);
 }
 
 .bg-light {
-  color: var(--clr-light);
+  background-color: var(--clr-light);
 }
 
 .py-1 {
@@ -81,20 +84,20 @@ a {
   border-radius: 12px;
 }
 
-.btn-primary{
+.btn-primary {
   background-color: var(--clr-primary);
-  padding: .5rem 2rem!important;
-  color: var(--clr-dark)!important;
+  padding: 0.5rem 2rem !important;
+  color: var(--clr-dark) !important;
 }
 
 /* navbar */
-#navbar{
+#navbar {
   background-color: var(--clr-dark);
   color: var(--clr-light);
   padding: 0.6rem;
 }
 
-#navbar div{
+#navbar div {
   display: flex;
   max-width: 1000px;
   margin: auto;
@@ -118,4 +121,101 @@ a {
   border-bottom: var(--clr-primary) solid 2px;
   padding: 0.75rem;
   margin: 0 0.25rem;
+}
+
+/* section slider */
+#slider {
+  height: 80vh;
+}
+
+.slider {
+  display: flex;
+  height: 60vh;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.panel {
+  background-size: auto cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 50px 5px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+/* section books */
+section#books {
+  background-color: var(--clr-dark);
+  height: 150vh;
+}
+
+.book-item {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: #1ae6c1 solid 5px;
+  margin: 5px auto;
+}
+
+.book-item:first-child {
+  border-top: #1ae6c1 solid 5px;
+}
+
+.book-item img {
+  width: auto;
+  max-height: 200px;
+  margin: auto 1rem;
+}
+.book-item .content {
+}
+
+.book-item .content h3 {
+  margin: 1rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* pendig media queries... */
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
 }
