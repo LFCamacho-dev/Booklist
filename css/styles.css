@@ -90,6 +90,11 @@ a {
   color: var(--clr-dark) !important;
 }
 
+.btn-primary:hover {
+  background-color: var(--clr-light);
+  color: var(--clr-primary)!important;
+}
+
 /* navbar */
 #navbar {
   background-color: var(--clr-dark);
@@ -153,9 +158,18 @@ a {
 .panel h3 {
   font-size: 24px;
   position: absolute;
-  bottom: 20px;
+  bottom: 85px;
   left: 20px;
   margin: 0;
+  opacity: 0;
+}
+
+.panel p {
+  font-size: 12px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0 5px;
   opacity: 0;
 }
 
@@ -164,6 +178,11 @@ a {
 }
 
 .panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel.active p {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
 }
@@ -195,11 +214,6 @@ section#books {
 .book-item .content h3 {
   margin: 1rem 0;
 }
-
-
-
-
-
 
 /* pendig media queries... */
 @media (max-width: 480px) {
