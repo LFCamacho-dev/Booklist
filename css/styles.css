@@ -197,12 +197,12 @@ section#books {
   display: flex;
   align-items: center;
   padding: 2rem;
-  border-bottom: #1ae6c1 solid 5px;
+  border-bottom: var(--clr-primary) solid 5px;
   margin: 5px auto;
 }
 
 .book-item:first-child {
-  border-top: #1ae6c1 solid 5px;
+  border-top: var(--clr-primary) solid 5px;
 }
 
 .book-item img {
@@ -215,6 +215,51 @@ section#books {
   margin: 1rem 0;
 }
 
+.form-section {
+  display: flex;
+  width: 100%;
+}
+
+.form {
+  background-color: var(--clr-primary);
+  padding: 25px;
+  width: 50%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.side {
+  background-color: var(--clr-dark);
+  color: var(--clr-primary);
+  padding: 25px;
+  width: 50%;
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+.form input,
+.form textarea {
+  display: block;
+  width: 100%;
+}
+
+.form textarea {
+  border: none;
+}
+
+.form input {
+  padding: 5px;
+  border: none;
+}
+
+.footer {
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  width: 100%;
+  text-align: center;
+}
+
 /* pendig media queries... */
 @media (max-width: 480px) {
   .container {
@@ -224,67 +269,5 @@ section#books {
   .panel:nth-of-type(4),
   .panel:nth-of-type(5) {
     display: none;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    background-color: black;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .container {
-    width: 1080px;
-  }
-
-  .form-section {
-    display: flex;
-    width: 100%;
-  }
-
-  .form {
-    background-color: #78c2ad;
-    padding: 25px;
-    width: 50%;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .side {
-    background-color: black;
-    color: #c7cecc;
-    padding: 25px;
-    width: 50%;
-    text-align: right;
-    font-size: 1.5rem;
-  }
-
-  .form input,
-  .form textarea {
-    display: block;
-    width: 100%;
-  }
-
-  .form textarea {
-    border: none;
-  }
-
-  .form input {
-    padding: 5px;
-    border: none;
-  }
-
-  .footer {
-    background-color: #78c2ad;
-    color: white;
-    width: 100%;
-    text-align: center;
   }
 }
