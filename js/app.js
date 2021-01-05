@@ -12,3 +12,4 @@ function removeActiveClases() {
     panel.classList.remove('active')
   })
 }
+
